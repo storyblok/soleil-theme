@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  background: $brand-color;
+  padding: 15px 32px;
+  color: #FFF;
+  text-decoration: none;
+  line-height: 1;
+  border: none;
+  font-size: rem(24px);
+  font-weight: 300;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: $secondary-color;
+  }
+}

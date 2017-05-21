@@ -1,0 +1,40 @@
+.quote {
+  position: relative;
+  margin: 100px 0 180px 0;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #9B9B9B;
+
+  blockquote {
+    margin: 0 50px;
+    font-style: normal;
+    color: #9B9B9B;
+    text-align: left;
+
+    @media (max-width: $breakpoint-small-max) {
+      margin: 0;
+    }
+  }
+}
+
+.quote__before {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 50px;
+
+  @media (max-width: $breakpoint-small-max) {
+    left: -40px;
+  }
+}
+
+.quote__after {
+  position: absolute;
+  bottom: -20px;
+  font-size: 50px;
+  right: 0;
+
+  @media (max-width: $breakpoint-small-max) {
+    right: -40px;
+  }
+}

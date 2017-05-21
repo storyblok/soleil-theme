@@ -1,0 +1,67 @@
+.colorbox {
+  position: relative;
+  background-color: #E50A7A;
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    .colorbox__overlay {
+      opacity: 0;
+    }
+
+    .colorbox__longtext {
+      display: flex;
+    }
+  }
+}
+
+.colorbox--blue {
+  background-color: #08AEE4;
+}
+
+.colorbox--orange {
+  background-color: #FDBD10;
+}
+
+.colorbox__longtext {
+  font-weight: 300;
+  font-size: rem(25px);
+  color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+.colorbox__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 20px;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-weight: 300;
+  font-size: rem(35px);
+  color: #FFFFFF;
+}

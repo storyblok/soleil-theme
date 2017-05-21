@@ -1,0 +1,23 @@
+{{ blok._editable }}
+<div class="footer u__clearfix">
+  <div class="footer__links">
+    <svg class="icon footer__to_top"><use xlink:href="#icon-totop"></use></svg>
+    <ul>
+      {% for navitem in blok.navi %}
+        <li>
+          <a href="{{ navitem.link | url }}">{{ navitem.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="footer__contact">
+    <div class="footer__email">
+      {{ blok.email }}<br>
+      {{ blok.phone }}
+    </div>
+    <div class="footer__social">
+      <a href="{{ blok.facebook_link }}">f</a>
+    </div>
+  </div>
+</div>

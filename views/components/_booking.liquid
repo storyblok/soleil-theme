@@ -1,0 +1,17 @@
+{{ blok._editable }}
+<div class="booking">
+  <h3 style="color: {{ blok.color }}">
+    {{ blok.title }}
+  </h3>
+  <h4>
+    {{ blok.sub_title }}
+  </h4>
+  <h3>
+    {{ blok.time | newline_to_br }}
+  </h3>
+  <div class="booking__cta">
+    <a class="btn" href="{{ blok.cta_link | url }}">
+      {{ blok.cta }}
+    </a>
+  </div>
+</div>

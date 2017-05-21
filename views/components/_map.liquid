@@ -1,0 +1,11 @@
+{{ blok._editable }}
+<div class="map">
+  <div class="map__address">
+    {{ blok.address | markdown }}
+  </div>
+  <div class="map__inner"
+    data-map-lat="{{ blok.map_lat }}"
+    data-map-lng="{{ blok.map_lng }}">
+
+  </div>
+</div>

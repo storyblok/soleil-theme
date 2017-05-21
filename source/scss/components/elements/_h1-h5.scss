@@ -1,0 +1,17 @@
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+  font-size: rem(40px);
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: rem(20px);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #E50A7A;
+}

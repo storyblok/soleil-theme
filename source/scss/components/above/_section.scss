@@ -1,0 +1,26 @@
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section--grey {
+  background: rgba(0,0,0,0.06);
+}
+
+.section--mpad {
+  padding: 60px 0 90px 0;
+}
+
+.section__icon {
+  font-size: 80px;
+  position: absolute;
+  right: -10px;
+  bottom: 50px;
+  display: none;
+}
+
+.section--grey {
+  .section__icon {
+    display: block;
+  }
+}

@@ -1,0 +1,9 @@
+{{ blok._editable }}
+<div class="headlined-image {{ blok.style | join(' ') }}">
+  <img src="{{ blok.image }}" />
+  <h2 class="headlined-image__text">
+    <svg class="icon headlined-image__before"><use xlink:href="#icon-quote_before"></use></svg>
+    <svg class="icon headlined-image__after"><use xlink:href="#icon-quote_after"></use></svg>
+    {{ blok.headline | newline_to_br }}
+  </h2>
+</div>

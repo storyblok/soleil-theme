@@ -1,0 +1,7 @@
+{{ blok._editable }}
+<img
+  srcset="{{ blok.source | resize:'400x0' }} 400w, {{ blok.source | resize:'300x0' }} 300w, {{ blok.source | resize:'768x0' }} 768w, {{ blok.source | resize:'1024x0' }} 1024w, {{ blok.source | resize:'640x0' }} 640w, {{ blok.source | resize:'1440x0' }} 1440w"
+  sizes="(max-width: 768px) 100vw, 33vw"
+  src="{{ blok.source | resize('1440x0') }}"
+  alt="{{ blok.alt }}"
+  class="img--responsive" />

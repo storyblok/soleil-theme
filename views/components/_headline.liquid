@@ -1,0 +1,6 @@
+{% if blok.type != blank %}
+  {{ blok._editable }}
+  <{{ blok.type }} class="{{ blok.style | join(' ') }}">
+    {{ blok.headline }}
+  </{{ blok.type }}>
+{% endif %}

@@ -1,0 +1,27 @@
+.contact {
+  padding: 100px 0 50px 0;
+}
+
+.contact__form {
+  max-width: 800px;
+  position: relative;
+
+  .contact__actions {
+    text-align: right;
+  }
+}
+
+.contact__i-before {
+  position: absolute;
+  top: -30px;
+  left: -50px;
+  font-size: 50px;
+}
+
+.contact__i-after {
+  position: absolute;
+  bottom: 35px;
+  font-size: 50px;
+  right: -30px;
+  width: 0.5em !important;
+}

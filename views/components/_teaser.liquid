@@ -1,0 +1,8 @@
+{{ blok._editable }}
+<div class="teaser">
+  <img
+    srcset="{{ blok.image | resize:'864x0' }} 864w, {{ blok.image | resize:'300x0' }} 300w, {{ blok.image | resize:'768x0' }} 768w, {{ blok.image | resize:'1024x0' }} 1024w, {{ blok.image | resize:'640x0' }} 640w, {{ blok.image | resize:'1440x0' }} 1440w"
+    sizes="100vw"
+    src="{{ blok.image | resize('1440x0') }}"
+    alt="{{ blok.alt }}" />
+</div>

@@ -1,0 +1,24 @@
+{{ blok._editable }}
+<div class="image-text {{ blok.style | join(' ') }}">
+  <div class="container">
+    <div class="image-text__pre">
+      {{ blok.intro }}
+    </div>
+    <div class="image-text__img">
+      <img
+        srcset="{{ blok.image | resize:'864x0' }} 864w, {{ blok.image | resize:'300x0' }} 300w, {{ blok.image | resize:'768x0' }} 768w, {{ blok.image | resize:'1024x0' }} 1024w, {{ blok.image | resize:'640x0' }} 640w, {{ blok.image | resize:'1440x0' }} 1440w"
+        sizes="100vw"
+        src="{{ blok.image | resize('1440x0') }}"
+        alt="{{ blok.alt }}"
+        class="img--responsive" />
+    </div>
+    <div class="image-text__text">
+      <h2 class="image-text__head">
+        {{ blok.headline }}
+      </h2>
+      <div class="image-text__markdown">
+        {{ blok.text | markdown }}
+      </div>
+    </div>
+  </div>
+</div>

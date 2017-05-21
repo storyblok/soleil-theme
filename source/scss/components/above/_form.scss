@@ -1,0 +1,161 @@
+.form {
+  input,
+  select,
+  textarea {
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    font: inherit;
+    color: inherit;
+  }
+
+  select {
+    text-transform: none;
+  }
+
+  optgroup {
+    font: inherit;
+    font-weight: bold;
+  }
+
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    padding: 0;
+  }
+
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  textarea,
+  input:not([type]),
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="datetime"] {
+    -webkit-appearance: none;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  textarea {
+    overflow: auto;
+    vertical-align: top;
+  }
+
+  ::-moz-placeholder {
+    opacity: 1;
+  }
+
+  :invalid {
+    box-shadow: none;
+  }
+
+  input:not([type="radio"]):not([type="checkbox"]),
+  select {
+    vertical-align: middle;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  select,
+  textarea,
+  input:not([type]),
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    height: rem(60px);
+    max-width: 100%;
+    padding: 15px 15px;
+    border: 1px solid #FDBD10;
+    background: #FFF;
+    color: #000;
+    font-size: rem(30px);
+    font-weight: 300;
+    line-height: rem(30px);
+
+    &:focus {
+      border-color: #CCC;
+      outline: 0;
+    }
+  }
+
+  textarea,
+  select[multiple],
+  select[size] {
+    height: auto;
+  }
+}
+
+.form__row {
+  margin: 0 0 20px 0;
+  position: relative;
+
+  label {
+    opacity: 0;
+    color: #000;
+    display: block;
+    font-weight: 300;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #CCC;
+    font-size: rem(13px);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+
+    &:valid {
+      &::placeholder {
+        opacity: 0;
+      }
+
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font-size: rem(20px);
+    }
+
+    &:valid + label {
+      opacity: 1;
+    }
+  }
+}

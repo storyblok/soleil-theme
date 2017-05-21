@@ -1,0 +1,6 @@
+{{ blok._editable }}
+<div class="uk-width-medium-{{ blok.width }}{% if blok.tablet_width != blank %} uk-width-small-{{ blok.tablet_width }}{% endif %}">
+  {% for item in blok.body %}
+    {% include item.component with blok: item %}
+  {% endfor %}
+</div>

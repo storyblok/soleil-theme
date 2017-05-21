@@ -1,0 +1,10 @@
+{{ blok._editable }}
+<div class="container">
+  <div class="quote">
+    <svg class="icon quote__before"><use xlink:href="#icon-quote_before"></use></svg>
+    <svg class="icon quote__after"><use xlink:href="#icon-quote_after"></use></svg>
+    <blockquote>
+      {{ blok.quote | markdown }}
+    </blockquote>
+  </div>
+</div>

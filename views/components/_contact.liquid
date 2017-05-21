@@ -1,0 +1,29 @@
+{{ blok._editable }}
+<div class="contact">
+  <div class="container">
+    <form class="contact__form js-form form" data-token="{{ public_token }}">
+      <input type="hidden" value="{{ blok.reciever_email | encrypt }}" name="to">
+
+      <svg class="icon contact__i-before"><use xlink:href="#icon-quote_before"></use></svg>
+      <svg class="icon contact__i-after"><use xlink:href="#icon-quote_after"></use></svg>
+      <div class="form__row">
+        <input required placeholder="{{ blok.name_label }}" id="message_name" type="text" name="message[name]">
+        <label for="message_name">{{ blok.name_label }}</label>
+      </div>
+      <div class="form__row">
+        <input required placeholder="{{ blok.email_label }}" id="message_email" type="text" name="message[email]">
+        <label for="message_email">{{ blok.email_label }}</label>
+      </div>
+      <div class="form__row">
+        <textarea required placeholder="{{ blok.inquiry_label }}" id="message_message" rows="5" name="message[body]"></textarea>
+        <label for="message_message">{{ blok.inquiry_label }}</label>
+      </div>
+      <div class="u__hidden">
+        <input type="text" name="message[comment]" />
+      </div>
+      <div class="contact__actions">
+        <button type="submit" class="btn">{{ blok.submit_label }}</button>
+      </div>
+    </form>
+  </div>
+</div>

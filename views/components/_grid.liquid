@@ -1,0 +1,6 @@
+{{ blok._editable }}
+<div class="uk-grid {{ blok.style | join(' ') }}">
+  {% for item in blok.columns %}
+    {% include item.component with blok: item %}
+  {% endfor %}
+</div>
