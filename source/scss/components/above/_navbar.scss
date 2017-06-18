@@ -13,7 +13,8 @@
   display: none;
 
   svg {
-    font-size: 50px;
+    font-size: 30px;
+    color: #E50A7A;
   }
 }
 
@@ -34,6 +35,10 @@
   }
 }
 
+.navbar--mobile {
+  display: none;
+}
+
 
 @media (max-width: ($breakpoint-medium-max + 20px)) {
   .header {
@@ -42,21 +47,29 @@
       display: block;
     }
 
-    .navbar {
+    .navbar--dt {
       display: none;
     }
   }
 
   .header--nav-open {
-    .navbar {
+    .navbar--mobile {
       display: block;
-      margin-top: 10px;
+      margin-top: 20px;
 
       li {
         display: block;
-        text-align: right;
+        text-align: center;
         line-height: 1;
         padding: 5px 0;
+
+        a {
+          display: block;
+          padding: 10px;
+          font-weight: 300;
+          font-size: 1.5rem;
+          color: #9B9B9B;
+        }
       }
     }
   }

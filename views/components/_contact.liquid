@@ -1,5 +1,6 @@
 {{ blok._editable }}
-<div class="contact">
+<div class="contact uk-position-relative">
+  <div id="contact__anchor"></div>
   <div class="container">
     <form class="contact__form js-form form" data-token="{{ public_token }}">
       <input type="hidden" value="{{ blok.reciever_email | encrypt }}" name="to">
@@ -15,7 +16,7 @@
         <label for="message_email">{{ blok.email_label }}</label>
       </div>
       <div class="form__row">
-        <textarea required placeholder="{{ blok.inquiry_label }}" id="message_message" rows="5" name="message[body]"></textarea>
+        <textarea required placeholder="{{ blok.inquiry_label }}" id="message_message" rows="5" name="message[body]">{{ params.subject }}</textarea>
         <label for="message_message">{{ blok.inquiry_label }}</label>
       </div>
       <div class="u__hidden">

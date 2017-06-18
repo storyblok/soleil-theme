@@ -42,6 +42,11 @@ let map = {
       mapOptions
     )
 
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(lat, lng),
+      map: gmap
+    })
+
     //Associate the styled map with the MapTypeId and set it to display.
     gmap.mapTypes.set('map_style', styledMap)
     gmap.setMapTypeId('map_style')

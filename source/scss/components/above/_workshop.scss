@@ -1,0 +1,65 @@
+.workshop {
+  .workshop__after {
+    width: 0.5em;
+  }
+}
+
+.workshop__more {
+  margin-left: calc(50% - 25px);
+  font-size: rem(30px);
+  color: #9B9B9B;
+  margin-bottom: 130px;
+  position: relative;
+  padding-right: 40px;
+
+  @media (max-width: $breakpoint-small-max) {
+    margin-left: 0;
+  }
+}
+
+.workshop__icon {
+  font-size: 80px;
+  position: absolute;
+  right: -10px;
+  bottom: -50px;
+}
+
+.workshop__before {
+  position: absolute;
+  top: rem(-110px);
+  left: -30px;
+  font-size: rem(90px);
+}
+
+.workshop__after {
+  position: absolute;
+  bottom: rem(-120px);
+  font-size: rem(90px);
+  right: 20px;
+}
+
+.workshop__text {
+  margin-left: calc(50% - 25px);
+  position: relative;
+  font-size: rem(100px);
+  font-weight: 700;
+  color: #E50A7A;
+  margin-top: 70px;
+  margin-bottom: 130px;
+  line-height: 0.8;
+  max-width: 700px;
+  padding-right: 20px;
+
+  @media (max-width: $breakpoint-small-max) {
+    margin-left: 0;
+  }
+
+  .workshop__link {
+    color: #E50A7A;
+    text-decoration: none;
+
+    @media (max-width: $breakpoint-small-max) {
+      font-size: rem(70px);
+    }
+  }
+}

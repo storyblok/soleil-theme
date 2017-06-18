@@ -41,14 +41,20 @@
       </div>
 
       <nav class="header__nav" role="navigation">
-        <a class="navbar__btn js-open-nav-btn" href="#top"><svg class="icon"><use xlink:href="#icon-bubble"></use></svg></a>
-        <ul class="navbar">
+        <a class="navbar__btn js-open-nav-btn" href="#top"><svg class="icon"><use xlink:href="#icon-navi"></use></svg></a>
+        <ul class="navbar navbar--dt">
           {% for item in global.content.header %}
             <li{% if story.uuid == item.link.id %} class="navbar__item--active"{% endif %}><a href="{{ item.link | url }}">{{ item.name }}</a></li>
           {% endfor %}
         </ul>
       </nav>
+
     </div>
+    <ul class="navbar navbar--mobile">
+      {% for item in global.content.header %}
+        <li{% if story.uuid == item.link.id %} class="navbar__item--active"{% endif %}><a href="{{ item.link | url }}">{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
   </header>
 
   <main id="main" role="main">

@@ -10,8 +10,16 @@
   box-sizing: border-box;
   z-index: 500;
 
+  @media (min-width: $breakpoint-medium-max + 21px) {
+    height: 266px;
+  }
+
   a {
     text-decoration: none;
+
+    &:hover {
+      color: #FDBD10;
+    }
   }
 }
 
@@ -29,7 +37,7 @@
 
   a {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: #9B9B9B;
   }
 }
@@ -41,6 +49,10 @@
 
 .header--shrink {
   padding: 20px 20px;
+
+  @media (min-width: $breakpoint-medium-max + 21px) {
+    height: 95px;
+  }
 
   .header__logo-img {
     display: none;

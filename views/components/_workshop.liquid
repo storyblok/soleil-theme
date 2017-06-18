@@ -1,0 +1,31 @@
+{{ blok._editable }}
+<div class="workshop">
+  <img
+    srcset="{{ blok.image | resize:'400x0' }} 400w, {{ blok.image | resize:'300x0' }} 300w, {{ blok.image | resize:'768x0' }} 768w, {{ blok.image | resize:'1024x0' }} 1024w, {{ blok.image | resize:'640x0' }} 640w, {{ blok.image | resize:'1440x0' }} 1440w"
+    sizes="(max-width: 768px) 100vw, 33vw"
+    src="{{ blok.image | resize:'1440x0' }}"
+    alt="Workshop"
+    class="img--responsive" />
+  <div class="container">
+    <h2 class="workshop__text">
+      <svg class="icon workshop__before"><use xlink:href="#icon-quote_before"></use></svg>
+      <svg class="icon workshop__after"><use xlink:href="#icon-quote_after"></use></svg>
+      <span class="workshop__link">
+        {{ blok.headline | newline_to_br }}
+      </span>
+    </h2>
+    <div class="workshop__more">
+      <svg class="icon workshop__icon"><use xlink:href="#icon-bubble"></use></svg>
+      {{ blok.text | markdown }}
+    </div>
+  </div>
+
+  <div class="collage__items uk-grid uk-grid-collapse">
+    {% for item in blok.images %}
+      <div class="uk-width-medium-1-3">
+        {{ item._editable }}
+        <img src="{{ item.source | resize:'400x300' }}" class="img--responsive" />
+      </div>
+    {% endfor %}
+  </div>
+</div>

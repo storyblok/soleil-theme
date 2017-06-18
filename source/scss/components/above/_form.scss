@@ -101,15 +101,15 @@
   input[type="search"],
   input[type="tel"],
   input[type="color"] {
-    height: rem(60px);
+    height: 60px;
     max-width: 100%;
     padding: 15px 15px;
     border: 1px solid #FDBD10;
     background: #FFF;
     color: #000;
-    font-size: rem(30px);
+    font-size: 20px;
     font-weight: 300;
-    line-height: rem(30px);
+    line-height: 20px;
 
     &:focus {
       border-color: #CCC;
@@ -137,7 +137,7 @@
     top: 10px;
     left: 15px;
     color: #CCC;
-    font-size: rem(13px);
+    font-size: 11px;
   }
 
   input,
@@ -149,9 +149,9 @@
         opacity: 0;
       }
 
-      padding-top: 20px;
+      padding-top: 23px;
       padding-bottom: 10px;
-      font-size: rem(20px);
+      font-size: 20px;
     }
 
     &:valid + label {

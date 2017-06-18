@@ -1,10 +1,13 @@
 {{ blok._editable }}
 <div class="collage">
+  {% if blok.cta_text != blank %}
   <div class="collage__cta">
-    <a href="{{ blok.cta_link | url }}">
+    <a href="{{ blok.cta_link | url }}?subject={{ blok.contact_text | url_encode }}">
       {{ blok.cta_text }}
     </a>
   </div>
+  {% endif %}
+  {% if blok.teaser != blank %}
   <div class="collage__teaser">
     <img
       srcset="{{ blok.teaser | resize:'864x0' }} 864w, {{ blok.teaser | resize:'300x0' }} 300w, {{ blok.teaser | resize:'768x0' }} 768w, {{ blok.teaser | resize:'1024x0' }} 1024w, {{ blok.teaser | resize:'640x0' }} 640w, {{ blok.teaser | resize:'1440x0' }} 1440w"
@@ -13,6 +16,7 @@
       alt="{{ blok.alt }}"
       class="img--responsive" />
   </div>
+  {% endif %}
   <div class="collage__items uk-grid uk-grid-collapse">
     {% for item in blok.body %}
       <div class="uk-width-medium-1-3">

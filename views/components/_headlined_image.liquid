@@ -1,9 +1,16 @@
 {{ blok._editable }}
 <div class="headlined-image {{ blok.style | join(' ') }}">
-  <img src="{{ blok.image }}" />
-  <h2 class="headlined-image__text">
-    <svg class="icon headlined-image__before"><use xlink:href="#icon-quote_before"></use></svg>
-    <svg class="icon headlined-image__after"><use xlink:href="#icon-quote_after"></use></svg>
-    {{ blok.headline | newline_to_br }}
-  </h2>
+  <div class="container u__mobile-no-padd">
+    <a href="{{ blok.link | url }}"><img src="{{ blok.image }}" /></a>
+    <h2 class="headlined-image__text">
+      <svg class="icon headlined-image__before"><use xlink:href="#icon-quote_before"></use></svg>
+      <svg class="icon headlined-image__after"><use xlink:href="#icon-quote_after"></use></svg>
+      <a class="headlined-image__link" href="{{ blok.link | url }}">
+        {{ blok.headline | newline_to_br }}
+      </a>
+      <div class="headined-image__more">
+        <a class="btn" href="{{ blok.link | url }}">{{ blok.btn_text }}</a>
+      </div>
+    </h2>
+  </div>
 </div>

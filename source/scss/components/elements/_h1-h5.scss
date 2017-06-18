@@ -14,4 +14,9 @@ h3 {
   margin-top: 5px;
   margin-bottom: 5px;
   color: #E50A7A;
+
+  @media (max-width: $breakpoint-small-max) {
+    font-size: rem(22px);
+    line-height: 1.3;
+  }
 }

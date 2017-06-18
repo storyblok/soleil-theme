@@ -5,3 +5,5 @@ import promis from 'promis'
 import map from './components/map'
 import navi from './components/navi'
 import form from './components/form'
+import colorbox from './components/colorbox'
+

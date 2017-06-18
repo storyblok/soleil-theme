@@ -292,3 +292,10 @@ $utility-scrollable-box-border-width: 1px !default;
 .u__invisible {
   visibility: hidden !important;
 }
+
+
+@media (max-width: $breakpoint-small-max) {
+  .u__mobile-no-padd {
+    padding: 0;
+  }
+}

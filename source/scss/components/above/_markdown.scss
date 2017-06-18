@@ -1,4 +1,8 @@
 .markdown {
   font-size: 1rem;
   font-weight: 300;
+
+  @media (max-width: $breakpoint-small-max) {
+    font-size: rem(22px);
+  }
 }

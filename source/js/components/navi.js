@@ -13,6 +13,7 @@ let navi = {
     let posY = window.pageYOffset || document.documentElement.scrollTop
     if (posY > 170) {
       utils.addClass(header, 'header--shrink')
+      utils.removeClass(header, 'header--nav-open')
     } else {
       utils.removeClass(header, 'header--shrink')
     }

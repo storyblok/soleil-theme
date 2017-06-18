@@ -1,4 +1,8 @@
 .headlined-image {
+  @media (max-width: $breakpoint-small-max) {
+    margin-top: 30px;
+  }
+
   img {
     width: 50%;
   }
@@ -16,6 +20,22 @@
     margin-right: calc(50% - 45px);
     margin-left: 0;
     float: right;
+
+    .headlined-image__link {
+      color: #FDBD10;
+    }
+  }
+}
+
+.headined-image__more {
+  margin-top: -20px;
+
+  @media (max-width: $breakpoint-small-max) {
+    margin-top: 0;
+
+    .btn {
+      padding: 12px 20px;
+    }
   }
 }
 
@@ -28,7 +48,7 @@
 
 .headlined-image__after {
   position: absolute;
-  bottom: rem(-110px);
+  bottom: rem(-120px);
   font-size: rem(90px);
   right: 20px;
 }
@@ -44,6 +64,15 @@
   line-height: 0.8;
   max-width: 700px;
   padding-right: 20px;
+
+  .headlined-image__link {
+    color: #E50A7A;
+    text-decoration: none;
+
+    @media (max-width: $breakpoint-small-max) {
+      font-size: rem(70px);
+    }
+  }
 
   @media (max-width: $breakpoint-small-max) {
     font-size: rem(80px);
