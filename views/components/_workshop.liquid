@@ -1,11 +1,38 @@
 {{ blok._editable }}
+{% assign current_slug = story.full_slug %}
 <div class="workshop">
+  <div style="position: relative;">
+
+  {% set workshops from stories starts_with:'en/workshops/' %}
+  {% for item in workshops.data %}
+    {% assign item_slug = item.full_slug %}
+    {% if item_slug == current_slug %}
+      {% assign last = forloop.index0 | minus: 1 %}
+      {% assign next = forloop.index0 | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if workshops.data[last] %}
+  <a class="prev" href="/{{ workshops.data[last].full_slug }}">
+    <svg class="icon"><use xlink:href="#icon-arrow"></use></svg>
+    <span>Previous<br> workshop</span>
+  </a>
+  {% endif %}
+  {% if workshops.data[next] %}
+  <a class="next" href="/{{ workshops.data[next].full_slug }}">
+    <svg class="icon"><use xlink:href="#icon-arrow"></use></svg>
+    <span>Next<br> workshop</span>
+  </a>
+  {% endif %}
+
+
   <img
     srcset="{{ blok.image | resize:'400x0' }} 400w, {{ blok.image | resize:'300x0' }} 300w, {{ blok.image | resize:'768x0' }} 768w, {{ blok.image | resize:'1024x0' }} 1024w, {{ blok.image | resize:'640x0' }} 640w, {{ blok.image | resize:'1440x0' }} 1440w"
     sizes="(max-width: 768px) 100vw, 33vw"
     src="{{ blok.image | resize:'1440x0' }}"
     alt="Workshop"
     class="img--responsive" />
+  </div>
   <div class="container">
     <h2 class="workshop__text">
       <svg class="icon workshop__before"><use xlink:href="#icon-quote_before"></use></svg>

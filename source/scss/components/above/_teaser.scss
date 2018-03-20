@@ -4,3 +4,111 @@
     height: auto;
   }
 }
+
+.slider {
+  position: relative;
+}
+
+.frame {
+  /**
+   * (optional) wrapper width, specifies width of the slider frame.
+   */
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slides {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -3.5rem;
+  display: none;
+  cursor: pointer;
+  font-size: 7rem;
+  text-decoration: none;
+
+  span {
+    color: #FFF;
+    display: block;
+    font-size: 1rem;
+    padding: 10px;
+    padding-right: 40px;
+    font-weight: 100;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-align: right;
+  }
+
+  &:hover {
+    color: red;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    display: block;
+  }
+}
+
+.next {
+  left: auto;
+  right: 0;
+
+  span {
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  svg {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+}
+
+.js_slide {
+  position: relative;
+}
+
+.slide_headline {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  font-size: 3.5rem;
+  color: #FFF;
+  text-align: center;
+  font-weight: 100;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    bottom: 60px;
+  }
+}
+
+.prev {
+  left: 10px;
+}
+
+.next svg, .prev svg {
+
+}

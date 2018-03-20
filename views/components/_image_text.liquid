@@ -1,16 +1,40 @@
 {{ blok._editable }}
-<div class="image-text {{ blok.style | join(' ') }}">
+<div id="{{ blok.id }}" class="image-text {{ blok.style | join(' ') }}">
   <div class="container">
     <div class="image-text__pre">
       {{ blok.intro }}
     </div>
     <div class="image-text__img">
+      {% if blok.images != blank %}
+      <div class="slideshow slider js_slider">
+          <div class="frame js_frame">
+              <ul class="slides js_slides">
+                  {% for image in blok.images %}
+                    <li class="js_slide">
+                      <img
+                        srcset="{{ blok.image | resize:'864x0' }} 864w, {{ blok.image | resize:'300x0' }} 300w, {{ blok.image | resize:'768x0' }} 768w, {{ blok.image | resize:'1024x0' }} 1024w, {{ blok.image | resize:'640x0' }} 640w, {{ blok.image | resize:'1440x0' }} 1440w"
+                        sizes="100vw"
+                        src="{{ blok.image | resize('1440x0') }}"
+                        alt="{{ blok.alt }}" />
+                    </li>
+                  {% endfor %}
+              </ul>
+          </div>
+          <span class="js_prev prev">
+            <svg class="icon"><use xlink:href="#icon-arrow"></use></svg>
+          </span>
+          <span class="js_next next">
+            <svg class="icon"><use xlink:href="#icon-arrow"></use></svg>
+          </span>
+      </div>
+      {% else %}
       <img
         srcset="{{ blok.image | resize:'864x0' }} 864w, {{ blok.image | resize:'300x0' }} 300w, {{ blok.image | resize:'768x0' }} 768w, {{ blok.image | resize:'1024x0' }} 1024w, {{ blok.image | resize:'640x0' }} 640w, {{ blok.image | resize:'1440x0' }} 1440w"
         sizes="100vw"
         src="{{ blok.image | resize('1440x0') }}"
         alt="{{ blok.alt }}"
         class="img--responsive" />
+      {% endif %}
     </div>
     <div class="image-text__text">
       <h2 class="image-text__head">
@@ -18,7 +42,11 @@
       </h2>
       <div class="image-text__markdown">
         {{ blok.text | markdown }}
+
       </div>
+      {% for item in blok.body %}
+        {% include item.component with blok: item %}
+      {% endfor %}
     </div>
   </div>
 </div>
